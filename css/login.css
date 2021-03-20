@@ -1,0 +1,102 @@
+
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-image: url(../html/img/background-index.jpg);
+	background-size: 100%;
+}
+
+
+/*Header */
+
+
+header{
+	height: 30px;
+	background-color: #333;
+}
+
+.header{
+	margin-left: 50px;
+	padding-top: 5px;
+}
+
+.header a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* formulario */
+
+#section-login{
+	width: 300px;
+background: rgb(75,75,75);
+background: linear-gradient(342deg, rgba(75,75,75,1) 0%, rgba(25,25,25,1) 100%);
+	margin: 0 auto;
+	padding: 30px;
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 15px;
+	box-shadow: 0px 5px 10px #333; 
+
+}
+
+h1{
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	font-family: arial;
+
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+}
+
+input{
+	border:none;
+    background-color:#fff;
+    box-shadow: none;
+
+
+	padding: 10px 10px;
+	margin: 8px 0px;
+	border-radius: 2px;
+}
+
+button{
+	background: rgb(163,130,54);
+	background: linear-gradient(255deg, rgba(163,130,54,1) 0%, rgba(182,138,36,1) 27%, rgba(255,195,132,1) 53%, rgba(186,135,31,1) 78%, rgba(255,208,101,1) 100%);;
+	background-size: 250%;
+	background-position: center;
+	border: none;
+	border-radius: 2px;
+	color: #333;
+	font-weight: bold;
+	padding: 10px 0px;
+	transition: all 0.7s ease;
+}
+
+button:hover{
+	background-size: 100%;
+	transition: all 1s ease;
+	color: #000;
+	
+}
+
+#invalido-2{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+	color: #fff;
+	font-family: arial;
+	font-size: 15px;
+	background-color: #ee3837;
+	padding: 5px;
+	border-radius: 5px;
+
+}

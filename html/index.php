@@ -10,8 +10,8 @@
 	<header>
 		<section id="header">
 			<div id="buttons">
-			<button><a href="home.html">Entrar</a></button>
-			<button><a href="home.html">Cadastrar</a></button>	
+			<button><a href="login.php">Entrar</a></button>
+			<button><a href="cadastro.php">Cadastrar</a></button>	
 			</div>
 		</section>
 	</header>
