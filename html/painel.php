@@ -2,6 +2,12 @@
 include("conexao.php");
 session_start();
 
+ini_set('display_errors', 0 );
+error_reporting(0);
+
+
+
+
 /* Verifica se o usuario está logado */
 if (!$_SESSION['usuario']) {
 	header('Location: index.php');
@@ -20,7 +26,7 @@ $linha = mysqli_fetch_assoc($dados);
 
 $userId = implode(':', $linha);
 
-$_SESSION['userId']= $userId;
+
 
 /* Consultando os dados da loja referente ao usuario*/
 $consulta2 = "SELECT * FROM `loja` WHERE userId = $userId;";
@@ -30,6 +36,30 @@ $dados2 = mysqli_query($conexao, $consulta2) or die(mysql_error());
 $linha2 = mysqli_fetch_assoc($dados2);
 
 $total2 = mysqli_num_rows($dados2);
+
+
+if ($total2>=1) {
+	
+
+/* Consultando produtos da loja */
+
+$cnpj3 =$linha2['cnpj'];
+$consulta3 = "SELECT `lojaId` FROM `loja` WHERE cnpj = '$cnpj3'";
+$dados3 = mysqli_query($conexao, $consulta3) or die(mysql_error());
+$linha3 = mysqli_fetch_assoc($dados3);
+$lojaId = implode(':', $linha3);
+
+$consulta4 = "SELECT * FROM `produto` WHERE lojaId = $lojaId;";
+
+$dados4 = mysqli_query($conexao, $consulta4) or die(mysql_error());
+
+$linha4 = mysqli_fetch_assoc($dados4);
+
+$total4 = mysqli_num_rows($dados4);
+
+}
+
+
 
 ?>
 
@@ -84,28 +114,50 @@ $total2 = mysqli_num_rows($dados2);
 			<p>Responsável para contato: <?=$linha2['nomeContato']?></p>
 				</div>
 			</div>
+
+			<h1 id="h1Inserir">Inserir produto</h1>
+			<form action="enviarProduto.php" method="POST" enctype="multipart/form-data" id="inserirProduto">
+				
+
+				<input type="file" name="foto" value="" required="" >
+				<input type="text" name="nome" placeholder="Nome do produto" required="" >
+				<input type="text" name="categoria" placeholder="Categoria" required="" >
+				<input type="text" name="estoque" placeholder="Estoque" required="" >
+				<input type="text" id="remove" name="cnpj2" value="<?=$linha2['cnpj']?>" >
+
+				<button type="submit">Enviar</button>
+
+				<style type="text/css">#remove{display: none;}</style>
+			</form>
+
+
 <?php
 		// finaliza o loop que vai mostrar os dados
 		}while($linha2 = mysqli_fetch_assoc($dados2));
 	// fim do if
 	}
 
+
+
+
+
+
+
+
+
+
+
+
 	if($total2 < 1):
 ?>
+
 	<h1 class="cadastrar-titulo">Cadastrar Loja</h1>
-
 	<div class="div-button">
-		
 	<div class="btn"><p>+</p></div>
-	
 	</div>
-
 	</main>
-
 	<div id="bg" class="bg-2">
-
 	<div class=" btn-2 x">X</div>
-
 	<form action="registrarLoja.php" method="POST">
 		<p>Cadastrar Loja</p>
 		<input type="text" name="nomeFantasia" placeholder="Nome Fantasia" required="">
@@ -129,6 +181,57 @@ endif;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+	// se o número de resultados for maior que zero, mostra os dados
+	if($total4 > 0) {
+		do {
+?>
+<div class="div-produtos">
+				
+
+			<img src="./imgEnviada/<?=$linha4['foto']?>">
+
+				<div class="produtos">
+			<p>Nome do Produto: <?=$linha4['nome']?>  </p>
+
+			<p>Categoria: <?=$linha4['categoria']?> </p>
+
+			
+			<form method="POST" action="atualizaEstoque.php">
+				<p>Estoque: <?=$linha4['estoque']?></p>
+				<input type="text" name="produtoId" id="remove" value="<?=$linha4['produtoId']?>">
+				<input type="text" name="atualizaEstoque">
+				<button type="submit">Atualizar</button>
+			</form>
+
+			<form method="POST" action="deletarProduto.php" >
+				<input type="text" name="produtoId" id="remove" value="<?=$linha4['produtoId']?>">
+				<button type="submit" id="deletarProduto">Remover Produto</button>
+			</form>
+			
+				</div>
+			</div>
+<?php
+		// finaliza o loop que vai mostrar os dados
+		}while($linha4 = mysqli_fetch_assoc($dados4));
+	// fim do if
+	}
+?>
+
+
+
 		
 
 </body>
@@ -136,6 +239,7 @@ endif;
 
 <script type="text/javascript">
 
+/* Script para tela de cadastro de loja */
 
 	document.querySelector(".btn").addEventListener("click", addClassName);
 

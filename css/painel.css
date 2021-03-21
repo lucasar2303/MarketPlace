@@ -1,3 +1,7 @@
+@font-face {
+   font-family: 'font';
+   src: url("./font/theboldfont.ttf");
+}
 
 body{
 	margin: 0;
@@ -63,7 +67,8 @@ header{
 }
 
 #header #marketplace{
-	font-family: "times new roman";
+	font-family: "font";
+	letter-spacing: 1.5px;
 
 }
 
@@ -258,4 +263,115 @@ main{
 	font-size: 50px;
 	top: 40px;
 	cursor: pointer;
+}
+
+
+
+
+
+#h1Inserir{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-family: arial;
+	font-weight: bold;
+	color: #00a6ed;
+}
+
+#inserirProduto{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+#inserirProduto input{
+	border: 2px solid #00a6ed;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#inserirProduto button{
+	background-color:  #070f24;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	color: #fff;
+}
+
+
+
+.div-produtos{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 30px;
+
+	display: flex;
+
+	background-color: #ccc
+	;
+	border-radius: 20px;
+
+}
+
+.div-produtos img{
+	width: 30%;
+	border-radius: 10px;
+}
+
+.produtos{
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	margin-left: 40px;
+	font-size: 25px;
+	font-family: arial;
+	font-weight: bold;
+	color: #070f24;
+}
+
+.produtos p{
+	margin: 0;
+}
+
+.produtos form{
+	display: flex;
+	align-items: center;
+}
+
+.produtos form input{
+	width: 40px;
+	border: 1px solid #070f24;
+	margin-left: 10px;
+	padding: 5px;
+}
+
+.produtos form button{
+	width: 80px;
+		padding: 5px;
+	border: 1px solid #070f24;
+	background-color: #070f24;
+	color: #fff;
+	cursor: pointer;
+}
+
+#deletarProduto{
+	margin-top: 100px;
+	width: 100%;
+}
+
+::-webkit-scrollbar {
+width:10px;
+height: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+background:#333;
+}
+ ::-webkit-scrollbar-thumb {
+background: #2e9dd8;
 }

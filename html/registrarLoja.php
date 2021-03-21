@@ -26,11 +26,12 @@ $sql = "INSERT INTO loja (nomeFantasia, cnpj, razaoSocial, enderecoCidade, ender
 
 if ($conexao->query($sql) === TRUE) {
 	$_SESSION['status_cadastroLoja'] = true;
+	header('Location: painel.php');
 }else{
 	echo "falhou";
 }
 
 
-header('Location: painel.php');
+
 exit;
 

@@ -1,4 +1,9 @@
 
+@font-face {
+   font-family: 'font';
+   src: url("./font/theboldfont.ttf");
+}
+
 body{
 	margin: 0;
 	padding: 0;
@@ -63,7 +68,11 @@ h1{
 	padding: 0;
 	margin: 0;
 	margin-top: 30px;
-	color: #070f24;
+	font-family: 'Font';
+	font-weight: bold;
+  background: -webkit-linear-gradient(#00a6ed, #070f24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
 }
 
@@ -72,10 +81,134 @@ h1{
 #pesquisar{
 	width: 100%
 	max-width: 1200px;
-	background-color: #fff;
-	height: 500px;
+	background-color: #070f24;
 	border-radius: 20px;
-	box-shadow: 0px 0px 10px #777;
 	padding: 50px;
 	margin-top: 30px;
+	margin-bottom: 50px;
+
+}
+
+#pesquisar h2{
+	color: #fff;
+	font-family: arial;
+	font-weight: bold;
+}
+
+#pesquisa{
+	padding: 10px;
+	width: 50%;
+	border-radius: 10px;
+	border: 2px solid #ccc;
+	box-shadow: 0px 0px 5px #fff;
+}
+
+
+
+
+.div-produtos{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 30px;
+
+	display: flex;
+
+	background-color: #fff;
+	border: solid 3px #00a6ed;
+	border-radius: 20px;
+
+}
+
+.div-produtos img{
+	
+	border-radius: 10px;
+}
+
+.produtos{
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	margin-left: 40px;
+	font-size: 25px;
+	font-family: arial;
+	font-weight: bold;
+	color: #070f24;
+}
+
+.produtos p{
+	margin: 0;
+}
+
+#vendaId {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 200px;
+}
+
+#vendaId input{
+	width: 175px;
+	padding: 10px;
+	border: 2px solid #ccc;
+
+}
+
+#vendaId button{
+	width: 100%;
+	padding: 10px;
+	background-color: #070f24;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+#nenhumResultado{
+	color: #fff;
+	font-family: arial;
+}
+
+#avaliar input{
+	padding: 5px;
+	width: 100px;
+}
+
+#avaliar button{
+	padding: 5px;
+	border:#070f24 solid 2px;
+	color: #fff;
+	background-color: #070f24;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.remove{
+	display: none;
+}
+
+::-webkit-scrollbar {
+width:10px;
+height: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+background:#333;
+}
+ ::-webkit-scrollbar-thumb {
+background: #2e9dd8;
 }
