@@ -14,6 +14,8 @@ Marketplace
 ## 📃 Sobre
 
 O projeto é um **Marketplace** que foi desenvolvido com o intuito de demonstrar todas os conhecimentos e habilidades.
+O sistema conta com cadastro e login, junto de gerenciamento de loja e produto.
+Também é possível pesquisar produtos na página principal e avaliar a loja. 
 
 ---
 
