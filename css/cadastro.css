@@ -13,7 +13,7 @@ body{
 
 header{
 	height: 30px;
-	background-color: #333;
+	background-color:#070f24;
 
 }
 
@@ -32,8 +32,7 @@ header{
 
 #section-login{
 	width: 300px;
-background: rgb(75,75,75);
-background: linear-gradient(342deg, rgba(75,75,75,1) 0%, rgba(25,25,25,1) 100%);
+	background-color:#070f24;
 	margin: 0 auto;
 	padding: 30px;
 	margin-top: 60px;
@@ -69,13 +68,12 @@ input{
 }
 
 button{
-	background: rgb(163,130,54);
-	background: linear-gradient(255deg, rgba(163,130,54,1) 0%, rgba(182,138,36,1) 27%, rgba(255,195,132,1) 53%, rgba(186,135,31,1) 78%, rgba(255,208,101,1) 100%);;
+	background-color: #00a6ed;
 	background-size: 250%;
 	background-position: center;
 	border: none;
 	border-radius: 2px;
-	color: #333;
+	color: #fff;
 	font-weight: bold;
 	padding: 10px 0px;
 	transition: all 0.7s ease;
@@ -84,7 +82,7 @@ button{
 button:hover{
 	background-size: 100%;
 	transition: all 1s ease;
-	color: #000;
+	color: #fff;
 	
 }
 

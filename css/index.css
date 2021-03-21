@@ -13,7 +13,7 @@ body{
 
 header{
 	height: 30px;
-	background-color: #333;
+	background-color: #070f24;
 
 
 }
@@ -38,7 +38,7 @@ header{
 	transition-duration: 0.5s;
 }
 #header button:hover{
-	background: #444;
+	background: #00a6ed;
 	border: none;
 	transition-duration: 0.5s;
 }
@@ -63,7 +63,7 @@ h1{
 	padding: 0;
 	margin: 0;
 	margin-top: 30px;
-	color: #333;
+	color: #070f24;
 
 }
 

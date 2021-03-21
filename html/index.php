@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+ini_set('display_errors', 0 );
+error_reporting(0);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,8 +17,31 @@
 	<header>
 		<section id="header">
 			<div id="buttons">
+
+			<?php
+			if ($_SESSION['usuario']):
+			?>
+			<button><a href="painel.php">Painel do usuário</a></button>
+			<?php
+			endif;
+			
+			?>
+
+			<?php
+			if (!$_SESSION['usuario']):
+			?>
+
 			<button><a href="login.php">Entrar</a></button>
-			<button><a href="cadastro.php">Cadastrar</a></button>	
+			<button><a href="cadastro.php">Cadastrar</a></button>
+
+			<?php
+			endif;
+	
+			?>
+
+
+
+
 			</div>
 		</section>
 	</header>
