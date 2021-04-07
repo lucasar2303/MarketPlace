@@ -375,3 +375,124 @@ background:#333;
  ::-webkit-scrollbar-thumb {
 background: #2e9dd8;
 }
+
+
+
+
+
+
+@media (max-width: 800px){
+	header{
+		height: 80px;
+	}
+
+	#items{
+		margin-top: 40px;
+		justify-content: space-between;
+		align-content: space-between;
+	}
+
+	#logar{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+
+		padding: 10px;
+
+	}
+
+	#logar p {
+		margin: 0 auto;
+	}
+
+
+	.cadastrar-titulo{
+		font-size: 30px;
+	}
+
+	.div-button{
+		width: 90%;
+	}
+
+	.btn{
+		height: 150px;
+	}
+	.bg form{
+		width: 90%;
+	}
+	.x{
+		top: 30px;
+	}
+
+	.div-dados{
+		width: 70%;
+	}
+
+	#nomeFantasia{
+		font-size: 20px;
+		color: #2e9dd8;
+	}
+
+	.div-produtos{
+		width: 70%;
+	}
+
+	.div-produtos img{
+		height: 30%;
+		width: 30%;
+	}
+
+	.produtos{
+		font-size: 15px;
+	}
+
+	#deletarProduto{
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 480px){
+	#deletarProduto{
+		width: 100%;
+	}
+
+	#atualizaEstoque{
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	#atualizaEstoque input{
+		margin: 0;
+	}
+
+}
+
+@media (max-width: 300px){
+
+
+	header{
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 930px){
+
+
+
+	#inserirProduto{
+		display: flex;
+		flex-direction: column;
+	}
+
+	#inserirProduto input{
+		height: 20px;
+		margin-bottom: 10px;
+	}
+
+	#inserirProduto button{
+		height: 35px;
+		margin-bottom: 50px;
+	}
+}

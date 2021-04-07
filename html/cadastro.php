@@ -8,16 +8,18 @@ error_reporting(0);
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>MarketPlace</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 	<link rel="stylesheet" type="text/css" href="../css/cadastro.css">
 </head>
 <body>
 <main>
 	<header>
 		<div class="header">
-		<a href="index.php">MarketPlace</a>
+		<a href="index.php">Início</a>
 		</div>
 	</header>
 

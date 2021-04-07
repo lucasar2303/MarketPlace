@@ -5,6 +5,7 @@
 }
 
 body{
+
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -79,7 +80,7 @@ h1{
 /* Pesquisa */
 
 #pesquisar{
-	width: 100%
+	
 	max-width: 1200px;
 	background-color: #070f24;
 	border-radius: 20px;
@@ -101,6 +102,15 @@ h1{
 	border-radius: 10px;
 	border: 2px solid #ccc;
 	box-shadow: 0px 0px 5px #fff;
+}
+
+#produtos-flex{
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
+	justify-content: space-between;
+	width: 100%;
+
 }
 
 
@@ -186,7 +196,162 @@ h1{
 
 
 
+@media (max-width: 800px){
 
+	main{
+		margin-top: 80px;
+
+	}
+
+	header{
+		height: 50px;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		border-bottom: 1px solid #fff;
+		box-shadow: 0px 10px 10px #070f24;
+	}
+
+	#header{
+		max-width: 90%;
+		justify-content: flex-start;
+	}
+
+	#buttons{
+		width: none;
+		margin-top: 15px;
+	}
+
+	#titulo{
+		font-size: 50px;
+	}
+
+	#pesquisar{
+		border-radius: 0;
+	}
+
+	#pesquisar h2{
+		width: 100%;
+		font-size: 20px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	#form-pesquisa{
+		display: flex;
+		justify-content: center;
+	}
+
+	#pesquisa{
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	.resultado{
+		width: 100%;
+	}
+
+	.div-produtos{
+		width: 90%;
+		justify-content: space-around;
+		align-items: center;
+
+	}
+
+	.div-produtos img{
+		width: 30%;
+		height: 30%;
+		min-width: 50px;
+	}
+
+	.produtos{
+		font-size: 10px;
+		width: 100%;
+	}
+
+	#produtos-flex{
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	justify-content: space-between;
+	width: 100%;
+	}
+
+	#vendaId{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		margin-left: 40px;
+
+
+	}
+
+	#vendaId input{
+		width: 100px;
+	}
+	#vendaId button{
+		width: 70px;
+		border: 1px solid #070f24;
+	}
+
+	#buttons {
+		width: 100%;
+	}
+}
+
+
+@media (max-width: 1250px){
+	
+	#header{
+		max-width: 70%;
+	}
+
+	}
+
+@media (max-width: 400px){
+	#titulo{
+		font-size: 30px;
+	}
+
+	#form-pesquisa{
+		margin-left: -20px;
+	}
+
+	.resultado{
+		margin-left: -20px;
+	}
+
+	.produtos{
+		margin-left: 10px;
+	}
+	#vendaId input{
+		width: 50px;
+	}
+
+	#vendaId{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		margin-left: 10px;
+	}
+	#avaliar input{
+		width: 50px;
+		margin-top: 10px;
+	}
+	#vendaId input{
+		width: 40px;
+		font-size: 10px;
+		margin-top: 10px;
+	}
+	#vendaId button{
+
+		font-size: 10px;
+		margin-top: 10px;
+	}
+
+
+}
 
 
 

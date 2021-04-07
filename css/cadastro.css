@@ -12,26 +12,28 @@ body{
 
 
 header{
-	height: 30px;
+	height: 50px;
 	background-color:#070f24;
 
 }
 
 .header{
 	margin-left: 50px;
-	padding-top: 5px;
+	padding-top: 15px;
 }
 
 .header a{
 	color: #fff;
 	text-decoration: none;
 	font-weight: bold;
+	font-family: arial;
 }
 
 /* formulario */
 
 #section-login{
-	width: 300px;
+	width: 40%;
+	max-width: 300px;
 	background-color:#070f24;
 	margin: 0 auto;
 	padding: 30px;
@@ -113,4 +115,66 @@ button:hover{
 	padding: 5px;
 	border-radius: 5px;
 
+}
+
+
+
+
+
+@media (max-width: 800px)
+{
+
+body{
+	background-image: none;
+	background-color: #070f24;
+}
+
+	#section-login{
+	width: 70%;
+	max-width: 300px;
+	background-color:#070f24;
+	margin: 0 auto;
+	padding: 30px;
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 15px;
+	box-shadow: none;
+
+}
+
+input{
+	padding: 15px;
+}
+
+button{
+	padding: 15px;
+}
+
+header{
+	height: 50px;
+	background-color:#070f24;
+	border-bottom: 2px solid #aaa;
+
+}
+
+.header{
+	margin-left: 50px;
+	padding-top: 15px;
+}
+
+.header a{
+	font-family: arial;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+}
+
+
+@media (max-width: 500px){
+#section-login h1{
+	font-size: 25px;
+}	
 }

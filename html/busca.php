@@ -25,7 +25,7 @@ error_reporting(0);
 			<div class='div-produtos'>
 			<img width='200px' height='200px' src='./imgEnviada/".$rows['foto']."''>";
 
-			echo "	<div class='produtos'>
+			echo "<div id='produtos-flex'>	<div class='produtos'>
 					<p>Nome do Produto: ".$rows['nome']."  </p>
 					";
 
@@ -91,7 +91,7 @@ error_reporting(0);
 				<input type='text' name='estoqueId' value=".$rows['estoque']." class='remove'>
 				<button type='submit'>Comprar</button>
 			</form>
-			</div>";
+			</div> </div>";
 		
 
 
@@ -124,7 +124,7 @@ error_reporting(0);
 			<div class='div-produtos'>
 			<img width='200px' height='200px' src='./imgEnviada/".$rows['foto']."''>";
 
-			echo "	<div class='produtos'>
+			echo "<div id='produtos-flex'>	<div class='produtos'>
 					<p>Nome do Produto: ".$rows['nome']."  </p>
 					";
 
@@ -178,7 +178,7 @@ error_reporting(0);
 				<input type='text' name='estoqueId' value=".$rows['estoque']." class='remove'>
 				<button type='submit'>Comprar</button>
 			</form>
-			</div>";
+			</div> </div>";
 
 			$produtoId = $rows['produtoId'];
 

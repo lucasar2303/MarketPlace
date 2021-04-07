@@ -70,13 +70,14 @@ $total4 = mysqli_num_rows($dados4);
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" type="text/css" href="../css/painel.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
 		<header>
 		<section id="header">
 			<div id="items">
-				<p><a href="index.php" id="marketplace">MarketPlace</a></p>
+				<p><a href="index.php" id="marketplace">Início</a></p>
 				<div id="logar">
 				<p>Logado como: <?php echo $_SESSION['usuario'];?> </p>
 				<p><a href="logout.php">Sair</a></p>
@@ -209,14 +210,14 @@ endif;
 			<p>Categoria: <?=$linha4['categoria']?> </p>
 
 			
-			<form method="POST" action="atualizaEstoque.php">
+			<form method="POST" action="atualizaEstoque.php" id="atualizaEstoque">
 				<p>Estoque: <?=$linha4['estoque']?></p>
 				<input type="text" name="produtoId" id="remove" value="<?=$linha4['produtoId']?>">
 				<input type="text" name="atualizaEstoque">
 				<button type="submit">Atualizar</button>
 			</form>
 
-			<form method="POST" action="deletarProduto.php" >
+			<form method="POST" action="deletarProduto.php" id="deletarProdutoForm">
 				<input type="text" name="produtoId" id="remove" value="<?=$linha4['produtoId']?>">
 				<button type="submit" id="deletarProduto">Remover Produto</button>
 			</form>
